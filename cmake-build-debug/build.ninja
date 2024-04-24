@@ -55,20 +55,8 @@ build CMakeFiles/C_CodiceFiscale.dir/main.c.obj: C_COMPILER__C_CodiceFiscale_uns
   OBJECT_DIR = CMakeFiles\C_CodiceFiscale.dir
   OBJECT_FILE_DIR = CMakeFiles\C_CodiceFiscale.dir
 
-build CMakeFiles/C_CodiceFiscale.dir/view.c.obj: C_COMPILER__C_CodiceFiscale_unscanned_Debug K$:/Informatica/C_CodiceFiscale/view.c || cmake_object_order_depends_target_C_CodiceFiscale
-  DEP_FILE = CMakeFiles\C_CodiceFiscale.dir\view.c.obj.d
-  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\C_CodiceFiscale.dir
-  OBJECT_FILE_DIR = CMakeFiles\C_CodiceFiscale.dir
-
-build CMakeFiles/C_CodiceFiscale.dir/controller.c.obj: C_COMPILER__C_CodiceFiscale_unscanned_Debug K$:/Informatica/C_CodiceFiscale/controller.c || cmake_object_order_depends_target_C_CodiceFiscale
-  DEP_FILE = CMakeFiles\C_CodiceFiscale.dir\controller.c.obj.d
-  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\C_CodiceFiscale.dir
-  OBJECT_FILE_DIR = CMakeFiles\C_CodiceFiscale.dir
-
-build CMakeFiles/C_CodiceFiscale.dir/model.c.obj: C_COMPILER__C_CodiceFiscale_unscanned_Debug K$:/Informatica/C_CodiceFiscale/model.c || cmake_object_order_depends_target_C_CodiceFiscale
-  DEP_FILE = CMakeFiles\C_CodiceFiscale.dir\model.c.obj.d
+build CMakeFiles/C_CodiceFiscale.dir/controls.c.obj: C_COMPILER__C_CodiceFiscale_unscanned_Debug K$:/Informatica/C_CodiceFiscale/controls.c || cmake_object_order_depends_target_C_CodiceFiscale
+  DEP_FILE = CMakeFiles\C_CodiceFiscale.dir\controls.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\C_CodiceFiscale.dir
   OBJECT_FILE_DIR = CMakeFiles\C_CodiceFiscale.dir
@@ -81,7 +69,7 @@ build CMakeFiles/C_CodiceFiscale.dir/model.c.obj: C_COMPILER__C_CodiceFiscale_un
 #############################################
 # Link the executable C_CodiceFiscale.exe
 
-build C_CodiceFiscale.exe: C_EXECUTABLE_LINKER__C_CodiceFiscale_Debug CMakeFiles/C_CodiceFiscale.dir/main.c.obj CMakeFiles/C_CodiceFiscale.dir/view.c.obj CMakeFiles/C_CodiceFiscale.dir/controller.c.obj CMakeFiles/C_CodiceFiscale.dir/model.c.obj
+build C_CodiceFiscale.exe: C_EXECUTABLE_LINKER__C_CodiceFiscale_Debug CMakeFiles/C_CodiceFiscale.dir/main.c.obj CMakeFiles/C_CodiceFiscale.dir/controls.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\C_CodiceFiscale.dir

@@ -3,16 +3,25 @@
  * 3AII
  * CODICE FISCALE
  *
- * */
+*/
+
+#include <stdio.h>
+#include "controls.h"
 
 int main (){
 
-    char name[100];
-    int error;
+    char surname[30];
+    int err=0;
 
-    title();
-    dataRequest(1);
-    error=takeTheData(1);
+    //richiesta dei dati
 
-    return 0;
+    do{
+        printf("Insert your surname: ");
+        fflush(stdout);
+
+        fgets(surname, 30, stdin); // Prendere il testo
+
+        err=isWord(surname); //Controllo se sono tutte lettere
+
+    }while(err==-1);
 }
