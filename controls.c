@@ -6,6 +6,7 @@
 */
 
 #include "controls.h"
+#include <string.h>
 #include <stdio.h>
 
 int isLetter(char a){
@@ -36,4 +37,40 @@ int isWord(char str[]){
         }
     }
     return 0;
+}
+
+void deleteReturnKey(char str[]){
+    unsigned int lenght;
+
+    lenght= strlen(str);
+
+    str[lenght - 1] = '\0';
+}
+
+void deleteSpace(char str[]){
+
+    int i, k;
+
+    for(i=0; str[i]!='\0'; i++){
+        if(str[i]==' '){
+            for(k=i; str[k]!='\0'; k++){
+                str[k]=str[k+1];
+            }
+        }
+    }
+}
+
+int yearControl(char str[]){
+    unsigned int lenght=strlen(str);
+
+    if(lenght>4){
+        printf("The year entered is too long!\n");
+        return -1;
+    }
+
+    for(int i=0; str[i]='\0'; i++){
+        if(!isNum(str[i])){
+            return -1;
+        }
+    }
 }
