@@ -61,16 +61,26 @@ void deleteSpace(char str[]){
 }
 
 int yearControl(char str[]){
-    unsigned int lenght=strlen(str);
+    unsigned int lenght;
+
+    lenght=strlen(str);
+
+    for(int i=0; i<lenght; i++) {
+        if (!isNum(str[i])) {
+            printf("There is a letter!\n");
+            return -1;
+        }
+    }
 
     if(lenght>4){
         printf("The year entered is too long!\n");
         return -1;
     }
 
-    for(int i=0; str[i]='\0'; i++){
-        if(!isNum(str[i])){
-            return -1;
-        }
+    if(lenght<4){
+        printf("The year entered is too short!\n");
+        return -1;
     }
+
+    return 0;
 }

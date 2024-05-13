@@ -3,8 +3,9 @@
  * 3AII
  * CODICE FISCALE
  *
-*/
+ * */
 
+#include <stdlib.h>
 #include <stdio.h>
 #include "controls.h"
 
@@ -13,11 +14,11 @@ int main (){
     char surname[30];
     char name[30];
     char birth[8];
-    int err=0;
+    int err;
 
     // Richiesta dei dati
 
-    //COGNOME
+    // COGNOME
     do{
         printf("Insert your surname: ");
         fflush(stdout);
@@ -47,17 +48,16 @@ int main (){
 
     //ANNO DI NASCITA
     do{
-        printf("Insert your date of birth: ");
+        printf("Insert your year of birth: ");
         fflush(stdout);
 
         fgets(birth, 8, stdin); // Prendere il testo
         deleteReturnKey(birth);
         deleteSpace(birth);
-        //printf("%s\n", name);
+        //printf("%s\n", birth);
 
         err=yearControl(birth);
 
     }while(err==-1);
+
 }
-
-
