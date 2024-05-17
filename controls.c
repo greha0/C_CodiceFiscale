@@ -28,11 +28,11 @@ int isWord(char str[]){
 
     for(i=0; str[i]!='\0'; i++){
         if(isNum(str[i])){
-            printf("There is a number!\n");
+            printf("C'è un numero!\n");
             return -1;
         }
         if(!isLetter(str[i])){
-            printf("%c is not allowed\n", str[i]);
+            printf("%c non è permesso\n", str[i]);
             return -1;
         }
     }
@@ -60,27 +60,34 @@ void deleteSpace(char str[]){
     }
 }
 
-int yearControl(char str[]){
+int numberControl(char str[], int dim){
     unsigned int lenght;
 
     lenght=strlen(str);
 
     for(int i=0; i<lenght; i++) {
         if (!isNum(str[i])) {
-            printf("There is a letter!\n");
+            printf("C'è una lettera!\n");
             return -1;
         }
     }
 
-    if(lenght>4){
-        printf("The year entered is too long!\n");
+    if(lenght>dim){
+        printf("Il numero inserito è troppo lungo!\n");
         return -1;
     }
 
-    if(lenght<4){
-        printf("The year entered is too short!\n");
+    if(lenght<dim){
+        printf("Il numero inserito è troppo corto!\n");
         return -1;
     }
 
+    return 0;
+}
+
+int monthControl(char str[]){
+    if(str == ){
+        printf("Mese inserito correttamente");
+    }
     return 0;
 }

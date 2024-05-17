@@ -12,5 +12,6 @@ int isWord(char str[]);
 int isNum(char a);
 void deleteReturnKey(char str[]);
 void deleteSpace(char str[]);
-int yearControl(char str[]);
+int numberControl(char str[], int dim);
+int monthControl(char str[]);
 #endif //C_CODICEFISCALE_CONTROLS_H
