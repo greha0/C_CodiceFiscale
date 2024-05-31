@@ -1,0 +1,9 @@
+//
+// Created by I3AI3 on 31/05/2024.
+//
+
+#ifndef C_CODICEFISCALE_CODICEFISCALE_H
+#define C_CODICEFISCALE_CODICEFISCALE_H
+
+int isConsonante(char c);
+#endif //C_CODICEFISCALE_CODICEFISCALE_H

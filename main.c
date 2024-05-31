@@ -6,8 +6,11 @@
  * */
 
 #include <stdlib.h>
+#include <string.h>
 #include <stdio.h>
+#include <ctype.h>
 #include "controls.h"
+
 
 int main (){
 
@@ -18,6 +21,7 @@ int main (){
     char day[10];
     char birthplace[50];
     char gender;
+    char codicefiscale[20];
     int err;
 
     // Richiesta dei dati
@@ -115,6 +119,11 @@ int main (){
 
         err=numberControl(day, 2);
 
+        if(day[1]>='3'){
+            err=-1;
+            printf("Giorno di nascita troppo lungo\n");
+        }
+
     }while(err==-1);
 
     //COMUNE DI NASCITA
@@ -126,9 +135,21 @@ int main (){
         fgets(birthplace, 50, stdin); // Prendere il testo
         deleteReturnKey(birthplace);
         deleteSpace(birthplace);
-        //printf("%s\n", month);
+        for(int i=0; i<strlen(birthplace); i++){
+            birthplace[i]=toupper(birthplace[i]);
+        }
+
+        //printf("%s\n", birthplace);
 
         err=isWord(birthplace);
 
     }while(err==-1);
+
+    // CREAZIONE DEL CODICE FISCALE
+
+    //COGNOME
+
+    for(int i=0; i<3; i++){
+        
+    }
 }

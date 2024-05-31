@@ -7,4 +7,5 @@ add_executable(C_CodiceFiscale
         main.c
         controls.h
         controls.c
+        codicefiscale.c
 )

@@ -9,6 +9,7 @@
 #include <string.h>
 #include <stdio.h>
 
+
 int isLetter(char a){
     if((a>='a' && a<='z')||(a>='A' && a<='Z')){
         return 1; // è una lettera
@@ -86,8 +87,54 @@ int numberControl(char str[], int dim){
 }
 
 int monthControl(char str[]){
-    if(str == ){
-        printf("Mese inserito correttamente");
+
+    if(strcmp(str, "gennaio")==0){
+        return 0;
     }
-    return 0;
+
+    if(strcmp(str, "febbraio")==0){
+        return 0;
+    }
+
+    if(strcmp(str, "marzo")==0){
+        return 0;
+    }
+
+    if(strcmp(str, "aprile")==0){
+        return 0;
+    }
+
+    if(strcmp(str, "maggio")==0){
+        return 0;
+    }
+
+    if(strcmp(str, "giugno")==0){
+        return 0;
+    }
+
+    if(strcmp(str, "luglio")==0){
+        return 0;
+    }
+
+    if(strcmp(str, "agosto")==0){
+        return 0;
+    }
+
+    if(strcmp(str, "settembre")==0){
+        return 0;
+    }
+
+    if(strcmp(str, "ottobre")==0){
+        return 0;
+    }
+
+    if(strcmp(str, "novembre")==0){
+        return 0;
+    }
+
+    if(strcmp(str, "dicembre")==0){
+        return 0;
+    }
+
+    return -1;
 }
