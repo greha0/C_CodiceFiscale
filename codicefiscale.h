@@ -5,5 +5,8 @@
 #ifndef C_CODICEFISCALE_CODICEFISCALE_H
 #define C_CODICEFISCALE_CODICEFISCALE_H
 
-int isConsonante(char c);
+int isConsonant(char c);
+void arrayCons(char str[], char cons[]);
+void arrayVoc(char str[], char vocal[]);
+void inizializzaArray(char str[]);
 #endif //C_CODICEFISCALE_CODICEFISCALE_H

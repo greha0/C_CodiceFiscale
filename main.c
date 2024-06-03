@@ -10,6 +10,7 @@
 #include <stdio.h>
 #include <ctype.h>
 #include "controls.h"
+#include "codicefiscale.h"
 
 
 int main (){
@@ -21,8 +22,17 @@ int main (){
     char day[10];
     char birthplace[50];
     char gender;
-    char codicefiscale[20];
     int err;
+
+    //CODICE FISCALE
+
+    char codicefiscale[10];
+    int cont=0;
+    int contV=0;
+    char consonantSur[10];
+    char vocalSur[10];
+    char consonantNam[10];
+
 
     // Richiesta dei dati
 
@@ -39,7 +49,7 @@ int main (){
         err=isWord(surname); // Controllo se sono tutte lettere
 
     }while(err==-1);
-
+/*
     //NOME
     do{
         printf("Inserisci il tuo nome: ");
@@ -144,12 +154,25 @@ int main (){
         err=isWord(birthplace);
 
     }while(err==-1);
-
+*/
     // CREAZIONE DEL CODICE FISCALE
 
     //COGNOME
 
+    inizializzaArray(consonantSur);
+    arrayCons(surname, consonantSur);
+    arrayVoc(surname, vocalSur);
+    printf("%s\n", consonantSur);
+
     for(int i=0; i<3; i++){
-        
+        if(isalpha(consonantSur[i])){
+            codicefiscale[cont]=consonantSur[i];
+            cont++;
+        } else {
+            codicefiscale[cont]=vocalSur[contV];
+            contV++;
+        }
     }
+    printf("%s\n", codicefiscale);
 }
+
